@@ -528,8 +528,8 @@ endif
 ifeq ($(CONFIG_PLATFORM_ARM_RPI), y)
 EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
 ARCH := arm
-CROSS_COMPILE :=
-KVER := $(shell uname -r)
+CROSS_COMPILE := arm-linux-gnueabihf-
+KVER := 3.12.24-rt38+
 KSRC ?= /lib/modules/$(KVER)/build
 MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
 endif
